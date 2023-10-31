@@ -1,0 +1,665 @@
+/* made padding and margin 0 for the whole screen */
+*{
+   margin:0;
+   padding:0;   
+}
+/* css for the body section */
+body{
+    height:100vh;
+}
+/* css for the nav section */
+nav{
+ 
+    display:flex;
+    flex-direction:row;  
+    width:100%;  
+    height:12vh;
+    background-color:#FEDE00;
+}
+/* css for the nav container */
+.nav-container{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width:100%;
+} 
+/* for logo section of the nav */
+.nav-logo i{
+   margin:6px;
+    color:black;
+    font-size:40px;
+    padding:10px;
+}
+.nav-logo span{
+    font-size:2rem;
+    color: black;
+}
+/* css for the right section of the nav */
+.nav-right{
+    width:70%;
+    display:flex;
+    justify-content:space-around;
+}
+.nav-input-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: black;
+}
+
+.nav-input-container input{
+    padding:7px;
+    width:360px;
+    border:none;
+    border-radius:20px 0px 0px 20px;
+    align-items: center;
+    font-size:1.2rem;
+    color: black;
+    border:2px solid black;
+    border-right:none;
+   
+}
+.nav-input-container input:focus{
+    outline:none;
+}
+.nav-input-container button{  
+    background-color:white;
+     height:46px;
+     width:60px;
+     padding:8px;
+     color: black;
+     margin-right:10px;
+     border:none;
+     outline:none;
+     border-radius:0px 20px 20px 0px;
+     border:2px solid black;
+     border-left:none;
+}
+/* css for the suggestion for the search section */
+.parent-div-input{
+    position: relative;
+}
+#suggestion{
+  background-color:white;
+   z-index:99;
+   padding:10px;
+   border-radius:0 0 20px 20px;
+   width:420px;
+   display:none;
+   max-height:300px;
+   overflow:hidden;
+}
+#suggestion ul{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+#suggestion ul li{
+margin:0 5px 2px 5px;
+cursor:pointer;
+
+}
+#suggestion ul li span{
+    margin:0 5px 0 5px;
+    padding:6px;
+}
+
+/* css for meal section of the nav */
+.nav-meal{
+    position: relative;
+}
+.nav-meal a{
+    color: black;
+   font-size:2.5rem;
+   text-decoration:none;
+   padding:8px;
+   position: absolute;
+   top:5px;
+  
+}
+
+/* css for the favourite section of the nav */
+.like-button i{
+    color:orangered;
+    font-size:50px;
+    padding:5px;
+    margin-top:10px;
+    position:relative;
+}
+
+.like-button span{
+   position:absolute;
+   color:black;
+   font-size:1.6rem;
+   top:1px;
+   right:95px;
+   z-index:1;
+   font-weight:700;
+}
+/* slider section for the container */
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slider img {
+    width: 100%;
+    height: auto;
+}
+.prev-button,
+.next-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.prev-button {
+    position: absolute;
+    left: 10px;
+}
+.next-button {
+    position: absolute;
+    right: 10px;
+}
+.main-div{
+    width:100%;
+    margin-top:-5px;
+}
+
+/* css for fotter section */
+.fotter-div{
+    height:500px;
+    width:100%;
+    background-color:#FEDE00;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    overflow: hidden; 
+}
+/* css for the soical icon*/
+.soical-icons-div{
+ display:flex;
+ flex-direction:row; 
+ justify-content:space-around;
+ width:60%;
+ margin-top:50px;
+ margin-bottom:70px;
+ cursor:pointer;
+}
+.soical-icons{
+    border:1px solid black;
+    height:60px;
+    width:60px;
+    display:flex;
+    flex-direction:row;
+    border-radius:50%; 
+}
+.soical-icons:hover{
+    box-shadow: 5px 5px 10px black;
+}
+.soical-icons i{
+    color:black;
+    margin:auto;
+}
+
+/* css for the fotter section for the options */
+.fotter-options{
+    color:black;
+    display:flex;
+    justify-content:space-around;
+    width:90%;
+    font-size:1.3rem;
+    margin-bottom:90px;
+}
+/* css for the copyright for the sections */
+.fotter-copyrighgt-span{
+    margin-bottom:40px;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+/* css for the category section */
+#category{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.item{
+    height:200px;
+    width:200px;
+}
+.item img{
+    height:100%;
+    width:100%;
+    border-radius:50%;
+}
+/* css for the main section of the category section */
+#display_common_food{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.container-main-meals{
+    height:400px;
+    width:350px;
+    margin:20px;
+    border-radius:30px;
+    background-color:#FEDE00;
+    position:relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions for smooth effect */
+    cursor: pointer;
+}
+.container-main-meals:hover{
+    transform: scale(0.9); /* Zoom out to 90% of the original size */
+  box-shadow: 0 0 20px black;
+}
+.container-main-meals img{
+    height:300px;
+    width:355px;
+    padding:20px;
+    border-radius:10%;
+    transition: all 0.5s ease;
+}
+.container-main-meals-all{
+    height:80px;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+}
+.container-meals-left{
+    width:80%;
+    margin-left:40px;
+    color:black;
+    font-size:1rem;
+    font-weight:500;
+}
+.container-meals-right{
+    width:50%;
+    margin-left:150px;
+    /* margin-top:20px; */
+    display:flex;
+    flex-direction:column;
+    margin-top:-20px;
+    color:black;
+    font-weight:5rem;
+}
+.container-meals-right i{
+    font-size:40px;
+    color:orangered;
+}
+.container-meals-right span{
+    font-size:1.3rem;
+    color:black;
+}
+
+/* media queries for different devices */
+
+@media screen and (max-width:2603px) {
+    .like-button span{
+       left:91%; 
+    } 
+}
+
+@media screen and (max-width:2400px) {
+
+    .like-button span{
+       left:91%;
+    } 
+
+} 
+
+@media screen and (max-width:2200px) {
+
+    .like-button span{
+       left:91.5%;
+    } 
+
+}
+
+
+@media screen and (max-width:2120px) {
+
+    .like-button span{
+       left:91.5%;
+      
+    } 
+
+}
+
+@media screen and (max-width:2030px) {
+
+ 
+    .like-button span{
+     
+       left:91.7%;
+       
+    } 
+
+}
+
+@media screen and (max-width:1800px) {
+
+    
+    .like-button span{
+       left:92%;
+    } 
+
+}
+@media screen and (max-width:1600px) {
+
+    
+    .like-button span{
+       left:92.5%;
+    } 
+
+}
+
+@media screen and (max-width:1450px) { 
+    .like-button span{
+       left:93%;
+    } 
+
+}
+
+@media screen and (max-width:1300px) {
+    .like-button span{
+       left:93.5%;
+    } 
+
+}
+
+@media screen and (max-width:1180px) {
+  
+    .nav-right{
+        width:80%;
+    }
+   
+}
+
+@media screen and (max-width:1046px) {
+    .nav-logo span{
+      font-size:1.5rem;  
+    }
+    .nav-right{
+        width:80%;
+    }
+    .nav-input-container input{
+      width:300px;  
+    } 
+}
+
+@media screen and (max-width:982px){
+    .soical-icons-div{
+        width:50%;
+    }
+     .fotter-options{
+        width:70%;
+        font-size:1rem;
+
+     }
+
+}
+  
+
+@media screen and (max-width:910px) {
+  .nav-left{
+    width:20%;
+  }
+  .nav-logo i{
+    font-size:30px;
+    padding:5px;
+    margin:2px;
+  }
+  .nav-logo span{
+    font-size:1.3rem;  
+  }
+  .nav-right{
+    width:80%;
+  }
+ 
+
+}
+
+@media screen and (max-width:900px) {
+    .nav-meal a{
+        font-size:2rem;
+        padding:5px;
+    }
+    .like-button i{
+        font-size:40px;
+    }
+}
+
+@media screen and (max-width:830px) {
+    .nav-input-container input{
+        width:250px;  
+      } 
+    .nav-meal a{
+        font-size:2rem;
+        padding:5px;
+    }
+   
+}
+
+@media screen and (max-width:857px) {
+    .fotter-options{
+        width:60%;
+        flex-direction:column;
+        text-align:center;
+    }
+    .soical-icons-div{
+        margin-top:200px;
+    }
+}
+
+
+
+
+@media screen and (max-width:739px) {
+   
+    .nav-right{
+        width:80%;
+    }
+    .nav-meal a{
+        font-size:1.5rem;
+        padding:3px;
+    }
+    .like-button i{
+        font-size:30px;
+        padding:2px;
+    }
+    .like-button span{
+       font-size:1rem; 
+    }
+  .fotter-options{
+    flex-direction: column;
+  }
+}
+
+
+
+@media screen and (max-width:672px) {
+  .nav-right{
+    width:70%;
+  }
+  .nav-meal a{
+    font-size:1.2rem;
+    padding:3px;
+    margin-left: -23px;
+
+}
+.nav-input-container input{
+    font-size:1rem;
+    padding:7px;
+    width:231px;
+}
+.nav-input-container button{
+    padding:7px;
+    height:41.5px;
+}
+.like-button i{
+    font-size:25px;
+    padding:2px;
+}
+.like-button span{
+  left:95%;
+  margin-left:10px;
+}
+.nav-left{
+    width:30%;
+}
+  
+}
+
+@media screen and (max-width:641px){
+    .nav-input-container button{
+        height:41.5px !important;
+    }  
+}
+
+
+@media screen and (max-width:569px) {
+
+    .nav-input-container input{
+        font-size:1rem;
+        padding:5px;
+        width:200px;
+    }
+    .nav-input-container button{
+        padding:6px;
+        height: 37.5px;
+        width:40px;
+    }
+    .nav-input-container img{
+        height: 20px;
+        width:20px;
+    }
+    .like-button span{
+        left:93.5%;
+        margin-left:10px;
+      }
+}
+
+@media screen and (max-width:568px){
+    .nav-input-container button{
+        padding:6px !important;
+        height:37.5px !important;
+   
+    }
+    .nav-input-container img{
+        height:15px;
+        width:20px;
+    }
+}
+
+
+  
+@media screen and (max-width:583px) {
+   .soical-icons-div{
+    width:80%;
+   } 
+ }
+
+ @media screen and (max-width:497px) {
+    .nav-input-container input{
+        font-size:1rem;
+        padding:5px;
+        width:170px;
+    }
+  }
+ 
+@media screen and (max-width:457px) {
+    .nav-left{
+        width:35%;
+      }
+      .nav-input-container input{
+        width:120px;
+      } 
+}
+
+ @media screen and (max-width:423px) {
+    .soical-icons-div{
+     width:80%;
+    } 
+    .container-main-meals{
+        width:320px;
+    }
+    .container-main-meals img{
+        width:320px;
+    }
+    .container-meals-left{
+        width:70%;
+        font-size:0.6rem;
+    }
+    .container-meals-right{
+        width:40%;
+    }
+    .container-meals-right i{
+        font-size:30px;
+    }
+    .container-meals-right span{
+        font-size:1rem;
+    }
+  }
+
+  @media screen and (max-width:400px){
+    #pour-tous{
+        display:none !important;
+    }
+    .nav-right{
+        width:85%;
+    }
+    .nav-left{
+        width:10%;
+    }
+    .like-button span{
+       left:90%;
+    }
+ 
+  }
+
+  @media screen and (max-width:397px){
+
+    .container-main-meals{
+        height:350px;
+        width:280px;
+    }
+
+    .container-main-meals img{
+        width:280px;
+        height:250px;
+    }
+    .container-meals-left{
+        width:60%;
+        font-size:0.5rem;
+    }
+    .container-meals-right{
+        width:60%;
+    }
+    .container-meals-right i{
+        font-size:20px;
+    }
+    .container-meals-right span{
+        font-size:0.7rem;
+    }
+  }
+
+
+  @media screen and (max-width:789px){
+    #display_common_food{
+        display:flex;
+        justify-content:center !important;
+        align-items:center;
+        flex-wrap:wrap;
+    }
+  
+}
